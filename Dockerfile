@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.7-alpine
 
 ENV PYTHONUNBUFFERED 1
 
@@ -9,5 +9,5 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-RUN adduser --disabled-login user
+RUN adduser -D user
 USER user
